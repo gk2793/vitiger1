@@ -1,0 +1,26 @@
+package automation;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class test_movetoelement {
+
+	public static void main(String[] args) {
+		WebDriver d = new ChromeDriver();
+		d.manage().window().maximize();
+		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		d.get("https://www.actitime.com/");
+		WebElement target = d.findElement(By.linkText("Pricing"));
+		Actions a = new Actions(d);
+		a.moveByOffset(500,800).contextClick();
+		// a.moveToElement(target, 100, 0);
+		 a.perform();
+
+	}
+
+}
