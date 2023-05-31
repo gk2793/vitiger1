@@ -20,7 +20,8 @@ public class test_movetoelement {
 		a.moveByOffset(500,800).contextClick();
 		// a.moveToElement(target, 100, 0);
 		 a.perform();
-
+  
+  d.quit();
 	}
 
 }
