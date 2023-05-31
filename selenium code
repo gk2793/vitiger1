@@ -15,13 +15,7 @@ public class test_movetoelement {
 		d.manage().window().maximize();
 		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		d.get("https://www.actitime.com/");
-		WebElement target = d.findElement(By.linkText("Pricing"));
-		Actions a = new Actions(d);
-		a.moveByOffset(500,800).contextClick();
-		// a.moveToElement(target, 100, 0);
-		 a.perform();
-  
-  d.quit();
+	
 	}
 
 }
